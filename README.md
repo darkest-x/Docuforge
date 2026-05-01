@@ -12,7 +12,7 @@
 
 DocuForge 是一个面向开发者与企业的文档生成平台，支持自动生成 API 文档、用户手册及多语言技术文档。项目通过大规模语言模型辅助完成文档结构设计、内容生成与版本管理。
 
-在本项目开发过程中，AI 被深度用于代码生成、架构设计与文档编写，总计消耗约 **520,000+ tokens**。
+在本项目开发过程中，claude code被深度用于代码生成、架构设计与文档编写。
 
 ## ✨ 核心特性
 
@@ -129,13 +129,13 @@ npm run test
 ## 📸 界面预览
 
 ### 仪表板
-
+![image-20260501160926256](README-photo/image-20260501160926256.png)
 
 ### 编辑器
-![Editor](docs/screenshots/editor.png)
+![image-20260501161000148](README-photo/image-20260501161000148.png)
 
 ### 文档管理
-![Documents](docs/screenshots/documents.png)
+![image-20260501160948963](README-photo/image-20260501160948963.png)
 
 ## 🛣️ 产品路线图
 
