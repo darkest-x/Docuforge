@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@import './styles/layout.css';
+@import './styles/components.css';
+@import './styles/utilities.css';
+@import './styles/animations.css';
+@import './styles/markdown.css';
+
 @layer base {
   * {
     @apply border-gray-200;

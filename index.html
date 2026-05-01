@@ -1,13 +1,128 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DocuForge - 智能文档生成平台</title>
+    
+    <meta name="description" content="DocuForge - 智能文档生成与管理平台，支持 AI 辅助文档创作" />
+    <meta name="keywords" content="文档生成,API文档,技术文档,Markdown,AI助手" />
+    <meta name="author" content="DocuForge Team" />
+    
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="DocuForge - 智能文档生成平台" />
+    <meta property="og:description" content="智能文档生成与管理平台，支持 AI 辅助文档创作" />
+    <meta property="og:site_name" content="DocuForge" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="DocuForge - 智能文档生成平台" />
+    <meta name="twitter:description" content="智能文档生成与管理平台，支持 AI 辅助文档创作" />
+    
+    <meta name="theme-color" content="#3b82f6" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+    
+    <link rel="manifest" href="/manifest.json" />
+    
+    <title>DocuForge - 智能文档生成与管理平台</title>
+    
+    <style>
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+      
+      .loading-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+      }
+      
+      .loading-content {
+        text-align: center;
+      }
+      
+      .loading-logo {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 24px;
+        animation: pulse 2s ease-in-out infinite;
+      }
+      
+      @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.7; }
+      }
+      
+      .loading-spinner {
+        width: 40px;
+        height: 40px;
+        border: 3px solid #e5e7eb;
+        border-top-color: #3b82f6;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin: 0 auto 16px;
+      }
+      
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+      
+      .loading-text {
+        color: #6b7280;
+        font-size: 16px;
+        font-weight: 500;
+      }
+      
+      .loading-title {
+        font-size: 24px;
+        font-weight: 700;
+        color: #111827;
+        margin-bottom: 8px;
+      }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <div class="loading-container">
+        <div class="loading-content">
+          <div class="loading-logo">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+          </div>
+          <div class="loading-title">DocuForge</div>
+          <div class="loading-spinner"></div>
+          <div class="loading-text">正在加载...</div>
+        </div>
+      </div>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
+    
+    <noscript>
+      <div style="text-align: center; padding: 48px;">
+        <h2>请启用 JavaScript 以运行 DocuForge</h2>
+        <p>DocuForge 需要 JavaScript 才能正常运行。请在浏览器设置中启用 JavaScript。</p>
+      </div>
+    </noscript>
   </body>
 </html>
