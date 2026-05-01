@@ -1,0 +1,5 @@
+export { default as Dashboard } from './Dashboard'
+export { default as Documents } from './Documents'
+export { default as CreateDocument } from './CreateDocument'
+export { default as DocumentDetail } from './DocumentDetail'
+export { default as NotFound } from './NotFound'
