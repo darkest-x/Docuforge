@@ -129,7 +129,7 @@ npm run test
 ## 📸 界面预览
 
 ### 仪表板
-![Dashboard](docs/screenshots/dashboard.png)
+
 
 ### 编辑器
 ![Editor](docs/screenshots/editor.png)

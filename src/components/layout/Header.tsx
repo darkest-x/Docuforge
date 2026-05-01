@@ -90,13 +90,19 @@ export const Header: React.FC<HeaderProps> = ({ className, onMenuClick }) => {
         <div className="relative">
           <button
             onClick={() => setShowUserMenu(!showUserMenu)}
-            className="flex items-center gap-3 p-2 hover:bg-gray-100 rounded-lg"
+            className="flex items-center gap-3 px-3 py-2 hover:bg-gray-100 rounded-lg transition-colors"
           >
-            <img
-              src={user?.avatar || 'https://i.pravatar.cc/40'}
-              alt={user?.name || '用户'}
-              className="w-8 h-8 rounded-full"
-            />
+            <div className="relative">
+              <img
+                src={user?.avatar || 'https://i.pravatar.cc/150?img=33'}
+                alt={user?.name || '用户'}
+                className="w-9 h-9 rounded-full object-cover border-2 border-gray-200"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).src = 'https://i.pravatar.cc/150?img=33'
+                }}
+              />
+              <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-500 rounded-full border-2 border-white"></span>
+            </div>
             <div className="hidden md:block text-left">
               <p className="text-sm font-medium text-gray-900">{user?.name}</p>
               <p className="text-xs text-gray-500">{user?.email}</p>

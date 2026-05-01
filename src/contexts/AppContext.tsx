@@ -18,8 +18,29 @@ interface AppProviderProps {
 }
 
 export const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
-  const [user, setUser] = React.useState<User | null>(null)
-  const [notifications, setNotifications] = React.useState<Notification[]>([])
+  const [user, setUser] = React.useState<User | null>({
+    id: 'user-1',
+    name: '张三',
+    email: 'zhangsan@example.com',
+    avatar: 'https://i.pravatar.cc/150?img=33',
+    role: 'admin'
+  })
+  const [notifications, setNotifications] = React.useState<Notification[]>([
+    {
+      id: 'notif-1',
+      type: 'success',
+      message: '欢迎使用 DocuForge！',
+      read: false,
+      createdAt: new Date().toISOString()
+    },
+    {
+      id: 'notif-2',
+      type: 'info',
+      message: '您的项目统计已更新',
+      read: false,
+      createdAt: new Date(Date.now() - 3600000).toISOString()
+    }
+  ])
   const [isLoading, setIsLoading] = React.useState(false)
 
   const addNotification = React.useCallback(
